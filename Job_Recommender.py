@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[25]:
-
-
 from gensim.models.doc2vec import Doc2Vec
 from LinkedIn import linkedin_crawler
 from datetime import datetime
@@ -59,17 +56,19 @@ def recommendation():
 
         ''')
         
+        #選擇履歷輸入方式
         query = input('請選1或2，或輸入其他字元結束程式: ')
         
+        #LinkedIn輸入
         if query == "1":
             url = input('Write your LinkedIn URL here: ')
             uname = input('Write your username here: ')
             pword = getpass.getpass('Write your password here: ')
             doc_origin = linkedin_crawler(url, uname, pword)
-
+        #打字輸入
         elif query == "2":
             doc_origin = input('Write your resume here: ')
-        
+        #跳出
         else:
             break
         
