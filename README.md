@@ -1,6 +1,7 @@
 # Job_Recommender
 
-### This is a job recommender written in python for Taiwanese.
+### This is a job recommender written in python for Taiwanese. 
+Well, I always wanted to be a researcher of Social Science before 20yo, then I became a heat transfer sales representative (never even knew this exist). Now I am trying to be a data analyst/engineer. I guess there will always be jobs you never knew but actually fits you well!
 
 ## Introduction
 
