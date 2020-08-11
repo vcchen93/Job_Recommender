@@ -13,9 +13,13 @@ Information of jobs were scraped from www.104.com.tw. It contains 167,730 differ
 ### Model
 [gensim Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html) was used to convert CKIPed information of jobs into eigenvectors.
 
+### LinkedIn Crawler
+The recommender can scrape information from LinkedIn as the source of your resume.
+The crawler use [Selenium](https://github.com/SeleniumHQ/selenium)(chrome version) to get data from LinkedIn.
+
 ## Usage
 To use the recommender, run Job_Recommender.py.
-LinkedIn.py is to provide the web crawler function.
+The recommender will suggest 3 jobs according to the resume you provide. 
 
 After starting the recommender, you can either 
 1. copy-paste/type your resume into the input block
