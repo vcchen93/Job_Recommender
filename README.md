@@ -1,20 +1,22 @@
 # Job_Recommender
 
-A job recommender written in python.
+###This is a job recommender written in python for Taiwanese.
 
-Job Recommender Package includes:
+##Introduction
 
-Job_Recommender.py -- This is the main app.
-1a. Job_Recommender.ipynb -- if you want to use Jupyter Notebook
+###Data Source
+Information of jobs were scraped from www.104.com.tw. It contains 167,730 different jobs from the website.
 
-LinkedIn.py -- This is a crawler for LinkedIn for the main app to import.
+###Data Processing
+[CKIP](https://github.com/ckiplab/ckiptagger) was used to do text segmentation.
 
-chromedriver.exe -- for the crawler
+###Model
+[gensim Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html) was used to convert CKIPed information of jobs into eigenvectors.
 
-Doc2Vec_CKIP_s104_167730_0730_v50_m2_e40.model -- model for recommendation
+###Usage
+To use the recommender, run Job_Recommender.py.
+LinkedIn.py is to provide the web crawler function.
 
-s104_textCombined_seg_0730.csv -- job information from www.104.com.tw
-
-README -- You are looking at it.
-
-To use the app, run Job_Recommender.py or Job_Recommender.ipynb and follow the instructions shown. It takes around 10 secs for the app to load data sets. Your patience is very much appreciated.
+After starting the recommender, you can either 
+1. copy-paste/type your resume into the input block
+2. let the recommender get information from your LinkedIn profile. Please note that LinkedIn requires the user to login to view profiles, so username and password will be needed.  
