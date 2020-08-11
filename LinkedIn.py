@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[44]:
-
-
 import getpass
 import pandas as pd
 from time import sleep
@@ -16,15 +13,13 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 
 def linkedin_crawler(url,uname,pword):
     
-
-    
     #開啟chrome driver
     driver = webdriver.Chrome('chromedriver')        
     
     #抓下來的資料存df
     df = pd.DataFrame(columns=['Location','About',                               'Position_1', 'Location_Employed_1', 'Job_Description_1',                               'Position_2', 'Location_Employed_2', 'Job_Description_2',                               'Position_3', 'Location_Employed_3', 'Job_Description_3',                               'School_Name_1', 'Degree_Name_1', 'Degree_Description_1',                                'School_Name_2', 'Degree_Name_2', 'Degree_Description_2',                                'School_Name_3', 'Degree_Name_3', 'Degree_Description_3',                                'Certification_Name_1', 'Certification_Auth_1',                               'Certification_Name_2', 'Certification_Auth_2',                               'Certification_Name_3', 'Certification_Auth_3',                               'Skill_1', 'Skill_2', 'Skill_3'])
 
-    
+    #登入LinkedIn
     driver.get('https://www.linkedin.com/')
     username = driver.find_element_by_name('session_key')
     username.send_keys(uname)
@@ -39,11 +34,12 @@ def linkedin_crawler(url,uname,pword):
     driver.get(url)
     sleep(1)
 
-    #讓他滾7下，資訊才會都顯示
+    #讓他滾下，資訊才會都顯示
     for i in range(9):
         driver.execute_script("var action=document.documentElement.scrollTop={}".format(i*400))
         sleep(0.1)
-        
+    
+    #開始資料擷取
     sel = Selector(text = driver.page_source)
 
     #Location
@@ -93,9 +89,7 @@ def linkedin_crawler(url,uname,pword):
             #print(description)
         except Exception as e:
             #print(e)
-            description = None
-
-    #print('-----------------------------')        
+            description = None     
 
     #Education-Section
     for i in range(3):
@@ -157,6 +151,7 @@ def linkedin_crawler(url,uname,pword):
                     
     driver.quit()
     
+    #將爬取的資料轉化為df再轉為text
     df = df.astype('str')
     text = df.apply(' '.join, axis=1)[0]
     
