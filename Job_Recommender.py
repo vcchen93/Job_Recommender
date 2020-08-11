@@ -21,7 +21,7 @@ def recommendation():
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
     #模型讀取
-    model = Doc2Vec.load("Doc2Vec_CKIP_s104_167730_0730_v50_m2_e40.model")
+    model = Doc2Vec.load("Doc2Vec_104_jobs.model")
   
     #CKIP斷詞資料
     #os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
