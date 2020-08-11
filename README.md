@@ -13,7 +13,7 @@ Information of jobs were scraped from www.104.com.tw. It contains 167,730 differ
 ### Model
 [gensim Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html) was used to convert CKIPed information of jobs into eigenvectors.
 
-### Usage
+## Usage
 To use the recommender, run Job_Recommender.py.
 LinkedIn.py is to provide the web crawler function.
 
