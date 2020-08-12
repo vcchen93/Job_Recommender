@@ -18,7 +18,7 @@ Information of jobs were scrapped from www.104.com.tw. It contains 167,730 diffe
 The recommender can scrape information from LinkedIn as the source of your resume.
 The crawler use [Selenium](https://github.com/SeleniumHQ/selenium)(chrome version) to get data from LinkedIn.
 
-### Files Needed
+### Requirements
 To use the recommender, the following files will be needed. Please download them and put them in the same folder with Job_Recommender.py.
 1. [chromedriver](https://chromedriver.chromium.org/) Please get a chromedriver that matches your version of chrome. This is required by Selenium to run LinkedIn crawler.
 2. [Doc2Vec_104_jobs.model](https://drive.google.com/file/d/1bwyV-SA4NgVY7Zbm7owhB77MpTzcOMLc/view?usp=sharing) This is the model for recommendation.
