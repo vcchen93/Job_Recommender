@@ -9,7 +9,7 @@ Well, I always wanted to be a researcher of Social Science before 20yo, then I b
 Information of jobs were scrapped from www.104.com.tw. It contains 167,730 different jobs from the website.
 
 ### Data Processing
-[CKIP](https://github.com/ckiplab/ckiptagger) was used to do text segmentation. For this project, it works better than Jieba, as the data is in Traditional Chinese, but also significantly slower.
+[CKIP](https://github.com/ckiplab/ckiptagger) was used to do word segmentation. For this project, it works better than Jieba, as the data is in Traditional Chinese, but also significantly slower.
 
 ### Model
 [gensim Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html) was used to convert CKIPed information of jobs into eigenvectors.
