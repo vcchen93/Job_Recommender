@@ -33,5 +33,6 @@ python Job_Recommender.py
 The recommender will suggest 3 jobs according to the resume you provide. 
 
 After starting the recommender, you can either 
-1. copy-paste/type your resume into the input block
-2. let the recommender get information from your LinkedIn profile. Please note that LinkedIn requires the user to login to view profiles, so username and password will be needed.  
+1. Enter 1, let the recommender get information from your LinkedIn profile. Please note that LinkedIn requires the user to login to view profiles, so username and password will be needed.  
+2. Enter 2, then copy-paste/type your resume into the input block
+3. Enter anything else, the app will be closed.
