@@ -19,7 +19,7 @@ The recommender can scrape information from LinkedIn as the source of your resum
 The crawler use [Selenium](https://github.com/SeleniumHQ/selenium)(chrome version) to get data from LinkedIn.
 
 ### Requirements
-To use the recommender, the following files will be needed. Please download them and put them in the same folder with Job_Recommender.py.
+To use the recommender, the following files will be needed. Please download and put them in the same folder as Job_Recommender.py.
 1. [chromedriver](https://chromedriver.chromium.org/) Please get a chromedriver that matches your version of chrome. This is required by Selenium to run LinkedIn crawler.
 2. [Doc2Vec_104_jobs.model](https://drive.google.com/file/d/1bwyV-SA4NgVY7Zbm7owhB77MpTzcOMLc/view?usp=sharing) This is the model for recommendation.
 3. [data](https://drive.google.com/drive/folders/18MN0Bqm6Awc4AZHSF2biQW2T_mykRySW?usp=sharing) This is the models and data for CKIP. We need this to do segmentation on your resume.
